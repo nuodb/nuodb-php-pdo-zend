@@ -126,8 +126,8 @@ class Zend_Db_Adapter_Pdo_Nuodb extends Zend_Db_Adapter_Pdo_Abstract
     {
         switch ($type) {
             case 'named':
-                return true;
             case 'positional':
+                return true;
             default:
                 return false;
         }
