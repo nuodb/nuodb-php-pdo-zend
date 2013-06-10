@@ -1,40 +1,39 @@
 # Zend Framework Data Adapter for NuoDB #
 
-This exposes a Zend_DB_Adapter for NuoDB.  This adapter is developed and tested with the Zend Framework Version 1.11.12.
+NuoDB supports both Zend Framework version 1 and 2.
+Customers should download the Zend Framework from the Zend website: framework.zend.com.
 
-This interface is written as a PHP PDO extension.  
+For Zend Framework v1, we provide Zend Framework v1 Data Adapter.  This adapter is developed and tested with the Zend Framework Version 1.11.12 & 1.12.3.  The NuoDB ZF1 Data Adapter depends on the NuoDB PHP PDO driver.  The NuoDB PHP PDO driver must be installed and configured before using the NuoDB Zend Framework v1 Data Adapter.
+
+For Zend Framework v2, no adapter is necessary.  The existing NuoDB PHP PDO driver works with the Zend Framework v2.  
 
 ## PREREQUISITES ##
 
+Both Zend Framework v1 and v2 depend on the NuoDB PHP PDO Driver.  The NuoDB PHP PDO Driver is provided in the NuoDB install in the 'drivers/php_pdo' directory. Follow the instructions to install/configure/test the NuoDB PHP PDO Driver before attempting to use the Zend Framework.
+
 PHP installation that conforms to the PHP API version 20090626.
 NuoDB PHP PDO Driver extension that is installed and configured.
-Zend Framework Version 1.11.12.
+Zend Framework Version 1 or 2.
 
 
 ## BUILDING ##
 
-The Zend Framework Data Adapter for NuoDB is delivered as PHP source code, so there is nothing to build.
+The NuoDB Zend Framework v1 Data Adapter for NuoDB is delivered as PHP source code, so there is nothing to build.
 
 
 ## INSTALL ##
 
-To install the NuoDB Zend Framework Data Adapter, copy the file Nuodb.php to your Zend Framework library/Zend/Db/Adapter/Pdo directory.
+To install the NuoDB Zend Framework v1 Data Adapter, copy the file Nuodb.php to your Zend Framework v1 library/Zend/Db/Adapter/Pdo directory.
 
 
 ## QUICK START ##
 
-The zf_hockey directory contains an example Zend Framework application that uses the NuoDB Zend Framework Data Adapter to perform CRUD operations on the NuoDB example Hockey database.
+There is two examples, one for each Zend Framework: 
 
-Following is a example Zend Framework resource.db configuration, from the application.ini file for the zf_hockey application:
+nuodb_zf1_quickstart.tar.gz 
+nuodb_zf2_tutorial.tar.gz
 
-resources.db.adapter = PDO_NUODB
-resources.db.params.host = localhost
-resources.db.params.username = dba
-resources.db.params.password = goalie
-resources.db.params.dbname = test@localhost
-resources.db.params.schema = hockey
-resources.db.params.options.autoQuoteIdentifiers = false
-
+There is a third example in the zf_hockey directory.  The zf_hockey example is deprecated and will be removed in a future version of NuoDB.
 
 
 ## LICENSE ##
