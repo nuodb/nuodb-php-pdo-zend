@@ -45,3 +45,5 @@ Related Pages:
 
 [homepage]: http://www.nuodb.com
 [license]: https://github.com/nuodb/nuodb-drivers/blob/master/LICENSE
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/f0b9c0e53893cfe6ef51b166d569a5d5 "githalytics.com")](http://githalytics.com/nuodb/nuodb-php-pdo-zend)
