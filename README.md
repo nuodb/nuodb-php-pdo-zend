@@ -32,7 +32,7 @@ nuodb_zf2_tutorial.tar.gz
 
 Zend Framework v1 quickstart
 ----------------------------
-There is a quickstart example on the framework.zend.com website.  The instructions for the quickstart in the Zend Framework v1 documenation. The quickstart is simple virtual guestbook application where visitors to a website can sign a guestbook.  
+There is a quickstart example on the framework.zend.com website.  The instructions for the quickstart in the Zend Framework v1 documenation. The quickstart is a simple virtual guestbook application where visitors to a website can sign a guestbook.  
 
 Follow the instructions for the quickstart example: 
 
@@ -40,29 +40,32 @@ Follow the instructions for the quickstart example:
 
 Instead of using sqlite.  Configure the NuoDB Zend Framework v1 Data Adapter as follows:
 
+```bash
 zf.sh configure db-adapter 'adapter=PDO_NUODB&host=localhost&username=cloud&password=user&dbname=test@localhost&schema=guestbook&options.autoQuoteIdentifers=false' production
+```
 
-Start the NuoDB Storage Manager (SM) an Transaction Engine (TE) on test@localhost, then use the following nuosql command to create the schema, table, and data:
+Start the NuoDB Storage Manager (SM) and Transaction Engine (TE) on test@localhost, then use the following nuosql command to create the schema, table, and data:
 
+```bash
 nuosql test@localhost --user cloud --password user
-> DROP SCHEMA guestbook CASCADE IF EXISTS;
-> CREATE SCHEMA guestbook;
-> USE guestbook;
-> CREATE TABLE guestbook (
+SQL> DROP SCHEMA guestbook CASCADE IF EXISTS;
+SQL> CREATE SCHEMA guestbook;
+SQL> USE guestbook;
+SQL> CREATE TABLE guestbook (
     "id" INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "email" VARCHAR(32) NOT NULL DEFAULT 'noemail@test.com',
     "comment" TEXT NULL,
     "created" DATETIME NOT NULL
 );
-> INSERT INTO guestbook ("email", "comment", "created") VALUES
+SQL> INSERT INTO guestbook ("email", "comment", "created") VALUES
     ('ralph.schindler@zend.com',
     'Hello! Hope you enjoy this sample zf application!',
     NOW());
-> INSERT INTO guestbook ("email", "comment", "created") VALUES
+SQL> INSERT INTO guestbook ("email", "comment", "created") VALUES
     ('foo@bar.com',
     'Baz baz baz, baz baz Baz baz baz - baz baz baz.',
     NOW());
-> 
+```
 
 Source code for the complete guestbook application is contained in nuodb_zf1_quickstart.tar.gz.
 
@@ -78,6 +81,7 @@ Follow the instructions for the tutorial example:
 
 Instead of using MySQL, start the NuoDB Storage Manager (SM) an Transaction Engine (TE) on test@localhost, then use the following nuosql command to create the schema, table, and data:
 
+```bash
 nuosql test@localhost --user cloud --password user
 SQL> DROP SCHEMA zf2tutorial CASCADE IF EXISTS;
 SQL> CREATE SCHEMA zf2tutorial;
@@ -98,9 +102,10 @@ SQL> INSERT INTO album (artist, title)
     VALUES  ('Lana  Del  Rey',  'Born  To  Die');
 SQL> INSERT INTO album (artist, title)
     VALUES  ('Gotye',  'Making  Mirrors');
+```
 
 The NuoDB connection settings should be placed in config/autoload/global.php as follows:
-
+```php
 <?php
 return array(
     'db' => array(
@@ -114,9 +119,10 @@ return array(
         ),
     ),
 );
+```
 
 The NuoDB username and password should be stored in config/autoload/local.php as follows:
-
+```php
 <?php
 return array(
     'db' => array(
@@ -124,6 +130,7 @@ return array(
         'password' => 'user',
     ),
 );
+```
 
 Source code for the complete tutorial application is contained in nuodb_zf2_tutorial.tar.gz.
 
