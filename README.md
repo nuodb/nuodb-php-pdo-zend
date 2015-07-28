@@ -1,6 +1,6 @@
 # Zend Framework Data Adapter for NuoDB #
 
-This is the official NuoDB PHP PDO Zend framework. It is actively supported by NuoDB, updated and tested with each new release of NuoDB and upon major releases of PHP.
+This is the community driven NuoDB PHP PDO Zend framework with limited support and testing from NuoDB.
 
 NuoDB supports both Zend Framework version 1 (ZF1) and 2 (ZF2).  Customers can download the Zend Framework from the Zend website: framework.zend.com.
 
