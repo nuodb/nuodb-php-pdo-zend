@@ -146,8 +146,6 @@ There is a third example in the zf_hockey directory.  The zf_hockey example is d
 
 This module is released under the [NUODB License] [license].
 
-Related Pages:
-
 [homepage]: http://www.nuodb.com
 [license]: https://github.com/nuodb/nuodb-php-pdo-zend/blob/master/LICENSE
 
