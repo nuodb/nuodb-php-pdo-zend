@@ -1,5 +1,7 @@
 # Zend Framework Data Adapter for NuoDB #
 
+This is the community driven NuoDB PHP PDO Zend framework with limited support and testing from NuoDB.
+
 NuoDB supports both Zend Framework version 1 (ZF1) and 2 (ZF2).  Customers can download the Zend Framework from the Zend website: framework.zend.com.
 
 For Zend Framework v1, we provide a Zend Framework v1 Data Adapter.  This adapter is developed and tested with the Zend Framework Versions 1.11.12 & 1.12.3.  The NuoDB ZF1 Data Adapter uses the NuoDB PHP PDO driver.  The NuoDB PHP PDO driver must be installed and configured before using the NuoDB Zend Framework v1 Data Adapter.
@@ -147,6 +149,5 @@ This module is released under the [NUODB License] [license].
 Related Pages:
 
 [homepage]: http://www.nuodb.com
-[license]: https://github.com/nuodb/nuodb-drivers/blob/master/LICENSE
+[license]: https://github.com/nuodb/nuodb-php-pdo-zend/blob/master/LICENSE
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/f0b9c0e53893cfe6ef51b166d569a5d5 "githalytics.com")](http://githalytics.com/nuodb/nuodb-php-pdo-zend)
